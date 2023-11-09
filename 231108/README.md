@@ -8,12 +8,13 @@
 
 |총 문제수|획득 경험치|연속 학습|
 |---:|---:|---|
-2|80xp|11일째🔥|
+3|80xp|11일째🔥|
 
 |교재|이름|난이도|상태|최근 제출 코드|
 |---|---|:---:|:---:|---|
 |[Intermediate Low / DP II / 진행하다 끊기고 또 진행하다 끊기는 DP](https://www.codetree.ai/missions?missionId=2)|[[개념]연속 부분 합의 최댓값 구하기](https://www.codetree.ai/missions/2/problems/max-of-partial-sum)|![쉬움][easy]|![Passed][passed]|[링크](https://github.com/emino39/codetree-TILs/blob/main/231108/%EC%97%B0%EC%86%8D%20%EB%B6%80%EB%B6%84%20%ED%95%A9%EC%9D%98%20%EC%B5%9C%EB%8C%93%EA%B0%92%20%EA%B5%AC%ED%95%98%EA%B8%B0/max-of-partial-sum.py)|
 |[Intermediate Low / DP II / 연속적이지만 직전 상황에 영향을 받는 DP](https://www.codetree.ai/missions?missionId=2)|[[개념]적절한 옷 고르기](https://www.codetree.ai/missions/2/problems/select-proper-clothes)|![쉬움][easy]|![Passed][passed]|[링크](https://github.com/emino39/codetree-TILs/blob/main/231108/%EC%A0%81%EC%A0%88%ED%95%9C%20%EC%98%B7%20%EA%B3%A0%EB%A5%B4%EA%B8%B0/select-proper-clothes.py)|
+|[Intermediate Low / DP II / 원하는 State를 정의하여 한 칸씩 나아가는 DP](https://www.codetree.ai/missions?missionId=2)|[[개념]둘 중 하나 잘 고르기](https://www.codetree.ai/missions/2/problems/choose-one-of-two-points)|![쉬움][easy]|![Passed][passed]|[링크](https://github.com/emino39/codetree-TILs/blob/main/231108/%EB%91%98%20%EC%A4%91%20%ED%95%98%EB%82%98%20%EC%9E%98%20%EA%B3%A0%EB%A5%B4%EA%B8%B0/choose-one-of-two-points.py)|
 
 
 * 획득 경험치: 해설을 보지 않고 푼 문제에 한해 최초 1회 경험치를 획득하실 수 있습니다.
