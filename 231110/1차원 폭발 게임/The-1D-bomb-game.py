@@ -1,56 +1,55 @@
+def change_zero(p, q):
+    # p: start, q: end
+    for j in range(p, q+1):
+        arr[j] = 0
+
+def remove_zero():
+    tmp = []
+
+    for j in range(len(arr)):
+        if arr[j] != 0:
+            tmp.append(arr[j])
+    
+    return tmp
+
 N, M = map(int, input().split())
 arr = [0] * N
 
-# arr 생성
 for n in range(N):
     arr[N-n-1] = int(input())
 
-if M == 1:
-    print(0)
-else:
-    while True:
-        flag = 0
+while True:
+    cnt = 1 # 같은 숫자일 때 count (default 1)
+    s, e = 0, 0 # 같은 숫자 인덱스 체크
+    flag = 0
 
-        if len(arr) < M:
-            break
-        
-        temp = [] # 새 arr
-        t = []
+    if len(arr) < M:
+        break
 
-        for i in range(len(arr)):
-            if t == []:
-                t = [arr[i]]
-            else:
-                if t[-1] == arr[i]:
-                    t.append(arr[i])
-                    if i == len(arr) -1:
-                        if len(t) >= M:
-                            flag = 1
-                            t = []
-                    # else:
-                    #     t.append(arr[i])
-                else:
-                    if len(t) >= M:
-                        flag = 1
-                        if i == len(arr)-1:
-                            temp += [arr[i]]
-                            t = []
-                        else:
-                            t = [arr[i]]
+    for i in range(1, len(arr)):
+        if arr[i] == arr[s]:
+            cnt += 1
+            e = i
+            
+        else:
+            if cnt >= M:
+                flag = 1
+                change_zero(s, e)
+            cnt = 1
+            s, e = i, i
 
-                    else:
-                        temp += t
-                        t = [arr[i]]
-        
-        if t:
-            temp += t
-        
-        arr = temp
+    if cnt >= M:
+        if s <= e:
+            change_zero(s, e)
+            flag = 1
 
-        if not flag:
-            break
-        
-    print(len(arr))
+    if flag:
+        arr = remove_zero()
+    
+    if not flag:
+        break
 
-    for j in range(len(arr)-1, -1, -1):
-        print(arr[j])
+print(len(arr))
+
+for k in range(len(arr)-1, -1, -1):
+    print(arr[k])
