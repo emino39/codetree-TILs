@@ -31,7 +31,13 @@ for i in range(1, n):
 
         if diff1 < diff2:
             dp[i][j] = tmp1
+        elif diff1 == diff2:
+            if tmp1[0] > tmp2[0]:
+                dp[i][j] = tmp2
+            else:
+                dp[i][j] = tmp1
         else:
             dp[i][j] = tmp2
 
+# print(dp)
 print(abs(dp[n-1][n-1][0] - dp[n-1][n-1][1]))
