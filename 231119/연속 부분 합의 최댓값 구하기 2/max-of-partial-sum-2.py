@@ -1,5 +1,8 @@
-n = int(input())
-arr = list(map(int, input().split()))
+import sys
+sys.stdin = open('input.txt')
+
+n = int(sys.stdin.readline())
+arr = list(map(int, sys.stdin.readline().split()))
 total = arr[0]
 # max_total = (-1000) * n
 max_total = total
@@ -10,7 +13,7 @@ for i in range(1, n):
         max_total = max(max_total, total)
 
     else:
-        if total + arr[i] < total:
+        if total + arr[i] < 0:
             max_total = max(max_total, total)
             total = arr[i]
         else:
