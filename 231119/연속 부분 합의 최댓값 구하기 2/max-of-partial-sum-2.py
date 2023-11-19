@@ -1,10 +1,6 @@
-import sys
-sys.stdin = open('input.txt')
-
-n = int(sys.stdin.readline())
-arr = list(map(int, sys.stdin.readline().split()))
+n = int(input())
+arr = list(map(int, input().split()))
 total = arr[0]
-# max_total = (-1000) * n
 max_total = total
 
 for i in range(1, n):
