@@ -1,9 +1,14 @@
 N = int(input())
-b_card = [int(input()) for _ in range(N)]
-a_card = []
+a_card, b_card = [], []
+num_check =[0] * (2 * N + 1)
+
+for _ in range(N):
+    t = int(input())
+    num_check[t] = 1
+    b_card.append(t)
 
 for n in range(1, 2*N+1):
-    if n not in b_card:
+    if num_check[n] == 0:
         a_card.append(n)
 
 b_card.sort()
